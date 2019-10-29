@@ -63,7 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterController.cs" />
-    <Compile Include="Assets\Scripts\GuiPhoneButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Classes\Enums.cs" />
+    <Compile Include="Assets\Scripts\Classes\RectTransformParameters.cs" />
+    <Compile Include="Assets\Scripts\PhoneScripts\GuiPhoneButtonScript.cs" />
+    <Compile Include="Assets\Scripts\PhoneScripts\PhoneMenuScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Unity Projects/Keep it Simple/Keep-It-Simple/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

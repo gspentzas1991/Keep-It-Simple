@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using Assets.Scripts.Classes;
 public class CharacterController : MonoBehaviour {
     
     [SerializeField] private Animator animator;
@@ -8,6 +9,8 @@ public class CharacterController : MonoBehaviour {
     [SerializeField] private Transform selectedTable;
     private NavMeshAgent navMeshAgent;
     private bool isOnTable = false;
+
+    public GuiPhoneButtonScript guiPhone;
 
     private void Start()
     {
@@ -42,7 +45,10 @@ public class CharacterController : MonoBehaviour {
     /// </summary>
     private void DetectTableSelection()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)){
+
+        //We ignore clicks if the phone is on fullscreen mode
+        if (Input.GetKeyDown(KeyCode.Mouse0) && guiPhone.phonePosition != PhonePosition.Fullscreen)
+        {
             RaycastHit hit;
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
