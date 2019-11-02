@@ -11,4 +11,9 @@ namespace Assets.Scripts.Classes
         IconTray=0,
         Fullscreen=1
     }
+    public enum TableStatus
+    {
+        Available = 0,
+        Occupied = 1
+    }
 }

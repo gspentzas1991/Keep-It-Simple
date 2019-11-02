@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Assets.Scripts.Classes;
+using UnityEngine.UI;
 
 public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -14,7 +15,7 @@ public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointe
     public PhonePosition phonePosition = PhonePosition.IconTray;
     [SerializeField] private float switchAnimationSpeed = 5f;
     private float switchAnimationTime = 0f;
-    [SerializeField] private GameObject phoneMenu;
+    [SerializeField] private RawImage phoneMenu;
 
     public void Start()
     {
@@ -73,7 +74,7 @@ public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointe
         {
             isSwitching = false;
             phonePosition = PhonePosition.Fullscreen;
-            phoneMenu.SetActive(true);
+            phoneMenu.enabled = true;
         }
         else if (rectTransform.sizeDelta == hoverPositionTransform.Size)
         {
@@ -99,7 +100,7 @@ public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointe
         {
             isSwitching = true;
             switchAnimationTime = 0;
-            phoneMenu.SetActive(false);
+            phoneMenu.enabled = false;
         }
     }
 }
