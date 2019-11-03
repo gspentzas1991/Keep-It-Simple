@@ -7,59 +7,59 @@ using UnityEngine.UI;
 
 public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private RectTransform rectTransform = null;
-    private RectTransformParameters hoverPositionTransform = new RectTransformParameters();
-    private RectTransformParameters fullscreenPositionTransform = new RectTransformParameters();
-    private Vector3 idlePhonePosition = new Vector3(-454.2f, -241.2f, 0);
-    private bool isSwitching = false;
-    public PhonePosition phonePosition = PhonePosition.IconTray;
-    [SerializeField] private float switchAnimationSpeed = 5f;
-    private float switchAnimationTime = 0f;
-    [SerializeField] private RawImage phoneMenu;
+    private RectTransform RectTransform = null;
+    private RectTransformParameters IdlePositionTransform = new RectTransformParameters();
+    private RectTransformParameters HoverPositionTransform = new RectTransformParameters();
+    private RectTransformParameters FullscreenPositionTransform = new RectTransformParameters();
+    private bool IsSwitching = false;
+    public PhonePosition PhonePosition = PhonePosition.IconTray;
+    [SerializeField] private float SwitchAnimationSpeed = 5f;
+    private float SwitchAnimationTime = 0f;
+    [SerializeField] private RawImage PhoneMenu;
 
     public void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-
-        //Initialize the hoverPosition and fullscreenPosition rectTransforms
-        hoverPositionTransform.Position = new Vector3(-435.7f, -214.4f, 0);
-        hoverPositionTransform.Rotation = Quaternion.Euler(new Vector3(0, 0, -26.15f));
-        hoverPositionTransform.Size = new Vector2(86.27f, 140.3f);
-
-        fullscreenPositionTransform.Position = new Vector3(0, 0, 0);
-        fullscreenPositionTransform.Rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        fullscreenPositionTransform.Size = new Vector2(230, 640);
-
+        RectTransform = GetComponent<RectTransform>();
+        //Initialize the position and fullscreenPosition rectTransforms
+        IdlePositionTransform.Position = new Vector3(-454.2f, -241.2f, 0);
+        IdlePositionTransform.Rotation = Quaternion.Euler(new Vector3(0, 0, -26.15f));
+        IdlePositionTransform.Size = new Vector2(86.27f, 140.3f);
+        HoverPositionTransform.Position = new Vector3(-435.7f, -214.4f, 0);
+        HoverPositionTransform.Rotation = Quaternion.Euler(new Vector3(0, 0, -26.15f));
+        HoverPositionTransform.Size = new Vector2(86.27f, 140.3f);
+        FullscreenPositionTransform.Position = new Vector3(0, 0, 0);
+        FullscreenPositionTransform.Rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        FullscreenPositionTransform.Size = new Vector2(230, 640);
     }
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (rectTransform.sizeDelta == hoverPositionTransform.Size)
+        if (RectTransform.sizeDelta == HoverPositionTransform.Size)
         {
-            rectTransform.localPosition = hoverPositionTransform.Position;
+            RectTransform.localPosition = HoverPositionTransform.Position;
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (rectTransform.sizeDelta == hoverPositionTransform.Size)
+        if (RectTransform.sizeDelta == HoverPositionTransform.Size)
         {
-            rectTransform.localPosition = idlePhonePosition;
+            RectTransform.localPosition = IdlePositionTransform.Position;
         }
     }
 
     public void Update()
     {
-        if (isSwitching)
+        if (IsSwitching)
         {
-            switchAnimationTime += Time.deltaTime * switchAnimationSpeed;
-            if (phonePosition == PhonePosition.IconTray)
+            SwitchAnimationTime += Time.deltaTime * SwitchAnimationSpeed;
+            if (PhonePosition == PhonePosition.IconTray)
             {
-                MovePhonePosition(hoverPositionTransform, fullscreenPositionTransform, switchAnimationTime);
+                MovePhonePosition(HoverPositionTransform, FullscreenPositionTransform, SwitchAnimationTime);
             }
-            else if (phonePosition == PhonePosition.Fullscreen)
+            else if (PhonePosition == PhonePosition.Fullscreen)
             {
-                MovePhonePosition(fullscreenPositionTransform, hoverPositionTransform, switchAnimationTime);
+                MovePhonePosition(FullscreenPositionTransform, IdlePositionTransform, SwitchAnimationTime);
             }
             CheckIfPhoneReachedPosition();
         }
@@ -70,16 +70,16 @@ public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointe
     /// </summary>
     private void CheckIfPhoneReachedPosition()
     {
-        if (rectTransform.sizeDelta == fullscreenPositionTransform.Size)
+        if (RectTransform.localPosition == FullscreenPositionTransform.Position)
         {
-            isSwitching = false;
-            phonePosition = PhonePosition.Fullscreen;
-            phoneMenu.enabled = true;
+            IsSwitching = false;
+            PhonePosition = PhonePosition.Fullscreen;
+            PhoneMenu.enabled = true;
         }
-        else if (rectTransform.sizeDelta == hoverPositionTransform.Size)
+        else if (RectTransform.localPosition == IdlePositionTransform.Position)
         {
-            isSwitching = false;
-            phonePosition = PhonePosition.IconTray;
+            IsSwitching = false;
+            PhonePosition = PhonePosition.IconTray;
         }
     }
 
@@ -88,19 +88,19 @@ public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointe
     /// </summary>
     private void MovePhonePosition(RectTransformParameters startingTransform, RectTransformParameters endingTransform , float interpolationPercentage)
     {
-        rectTransform.localPosition = Vector3.Lerp(startingTransform.Position, endingTransform.Position, interpolationPercentage);
-        rectTransform.localRotation = Quaternion.Slerp(startingTransform.Rotation, endingTransform.Rotation, interpolationPercentage);
-        rectTransform.sizeDelta = Vector2.Lerp(startingTransform.Size, endingTransform.Size, interpolationPercentage);
+        RectTransform.localPosition = Vector3.Lerp(startingTransform.Position, endingTransform.Position, interpolationPercentage);
+        RectTransform.localRotation = Quaternion.Slerp(startingTransform.Rotation, endingTransform.Rotation, interpolationPercentage);
+        RectTransform.sizeDelta = Vector2.Lerp(startingTransform.Size, endingTransform.Size, interpolationPercentage);
     }
 
     //Fired when the user clicks on the phone 
     public void ClickedOnPhone ()
     {
-        if(rectTransform.sizeDelta == fullscreenPositionTransform.Size || rectTransform.sizeDelta == hoverPositionTransform.Size)
+        if(RectTransform.sizeDelta == FullscreenPositionTransform.Size || RectTransform.sizeDelta == HoverPositionTransform.Size)
         {
-            isSwitching = true;
-            switchAnimationTime = 0;
-            phoneMenu.enabled = false;
+            IsSwitching = true;
+            SwitchAnimationTime = 0;
+            PhoneMenu.enabled = false;
         }
     }
 }

@@ -7,51 +7,47 @@ using System.Linq;
 
 public class CustomerManager : MonoBehaviour
 {
-    private List<Customer> customerList = new List<Customer>();
-    [SerializeField] private float customerSpawnSpeed=3f;
-    [SerializeField] private int maxCustomers = 3;
-    private bool spawningIsActive = true;
-    private Dictionary<int, TableStatus> tableAvailabilityList = new Dictionary<int, TableStatus>();
+    [SerializeField] private readonly float CustomerSpawnTimer=3f;
+    [SerializeField] private readonly int MaxCustomers = 3;
+    private float CurrentCustomerSpawnTimer;
+    private List<TableScript> TableList;
 
     void Start()
     {
-        //Makes all tables available
-        int tableGameobjectCount = GameObject.FindGameObjectsWithTag("Table").Count();
-        for (int i = 1; i <= tableGameobjectCount; i++)
+        //spawnTimer initialization
+        CurrentCustomerSpawnTimer = CustomerSpawnTimer;
+        TableList = GameObject.FindGameObjectsWithTag("Table").Select(x=>x.GetComponent<TableScript>()).ToList();
+    }
+
+    void Update()
+    {
+        CurrentCustomerSpawnTimer -= Time.deltaTime;
+        if (CurrentCustomerSpawnTimer <= 0)
         {
-            tableAvailabilityList.Add(i, TableStatus.Available);
+            CurrentCustomerSpawnTimer = CustomerSpawnTimer;
+            StartCoroutine(SpawnCustomer());
         }
-        //Creates the fist customer
-        Customer startingCustomer = new Customer();
-        startingCustomer.tableNumber = Random.Range(1, 9);
-        customerList.Add(startingCustomer);
-        tableAvailabilityList[startingCustomer.tableNumber]= TableStatus.Occupied;
-        StartCoroutine(AutomaticCustomerSpawning(customerSpawnSpeed));
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            TableList.Where(x=>x.Order!=null).First().GetComponent<TableScript>().ClearTable();
+        }
     }
 
     /// <summary>
-    /// Spawns a new customer every spawnSpeed seconds
+    /// Tries to spawn a new customer
     /// </summary>
-    IEnumerator AutomaticCustomerSpawning(float spawnSpeed)
+    IEnumerator SpawnCustomer()
     {
-        while (spawningIsActive)
+        var occupiedSeatCount = TableList.Count(x => x.Order != null);
+        //If there are maxCustomers seated, or no tables available we don't accept new customers
+        if (occupiedSeatCount < MaxCustomers && occupiedSeatCount!= TableList.Count)
         {
-            yield return new WaitForSeconds(spawnSpeed);
-            var occupiedSeats = tableAvailabilityList.Count(x => x.Value == TableStatus.Occupied);
-            //If there are 3 customers seated, we don't accept new customers
-            if (occupiedSeats < maxCustomers && occupiedSeats!=tableAvailabilityList.Count)
-            {
-                Customer newCustomer = new Customer();
-                //Keeps trying to find an available table randomly
-                do
-                {
-                    newCustomer.tableNumber = Random.Range(1, 9);
-                } while (tableAvailabilityList[newCustomer.tableNumber] == TableStatus.Occupied);
-                tableAvailabilityList[newCustomer.tableNumber] = TableStatus.Occupied;
-                customerList.Add(newCustomer);
-            }
+            //randomly gets an available table
+            var availableTableList = TableList.Where(x => x.Order == null).ToList();
+            var selectedTable = availableTableList[Random.Range(0, availableTableList.Count)];
+            selectedTable.GenerateFoodOrder();
         }
-
+        yield return null;
     }
 
 }

@@ -4,27 +4,27 @@ using UnityEngine.AI;
 using Assets.Scripts.Classes;
 public class CharacterController : MonoBehaviour {
     
-    [SerializeField] private Animator animator;
-    [SerializeField] private Camera camera;
-    [SerializeField] private Transform selectedTable;
-    private NavMeshAgent navMeshAgent;
-    private bool isOnTable = false;
+    [SerializeField] private Animator Animator;
+    [SerializeField] private Camera Camera;
+    private Transform SelectedTable;
+    private NavMeshAgent NavMeshAgent;
+    private bool IsOnTable = false;
 
-    public GuiPhoneButtonScript guiPhone;
+    public GuiPhoneButtonScript GuiPhone;
 
     private void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        NavMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     void Update () {
         DetectTableSelection();
         //If a table is selected the waiter starts moving towards it
-        if (selectedTable)
+        if (SelectedTable)
         {
-            MoveTowardsTarget(selectedTable);
+            MoveTowardsTarget(SelectedTable);
         }
-        animator.SetFloat("MoveSpeed", Mathf.Abs(navMeshAgent.velocity.z) + Mathf.Abs(navMeshAgent.velocity.x));
+        Animator.SetFloat("MoveSpeed", Mathf.Abs(NavMeshAgent.velocity.z) + Mathf.Abs(NavMeshAgent.velocity.x));
     }
     
     /// <summary>
@@ -33,9 +33,9 @@ public class CharacterController : MonoBehaviour {
     /// <param name="target"></param>
     private void MoveTowardsTarget(Transform target)
     {
-        if(!isOnTable)
+        if(!IsOnTable)
         {
-            navMeshAgent.SetDestination(target.position);
+            NavMeshAgent.SetDestination(target.position);
         }
     }
 
@@ -47,32 +47,33 @@ public class CharacterController : MonoBehaviour {
     {
 
         //We ignore clicks if the phone is on fullscreen mode
-        if (Input.GetKeyDown(KeyCode.Mouse0) && guiPhone.phonePosition != PhonePosition.Fullscreen)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && GuiPhone.PhonePosition != PhonePosition.Fullscreen)
         {
             RaycastHit hit;
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
                 Transform objectHit = hit.transform;
                 if (objectHit.gameObject.tag == "Table")
                 {
-                    selectedTable = objectHit;
-                    isOnTable = false;
-                    navMeshAgent.isStopped = false;
+                    SelectedTable = objectHit;
+                    IsOnTable = false;
+                    NavMeshAgent.isStopped = false;
                 }
             }
         }
     }
 
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         //if the waiter has reached the selected table's trigger, he has reached the table
-        if (other.gameObject == selectedTable.gameObject)
+        if (other.gameObject == SelectedTable.gameObject)
         {
-            isOnTable = true;
-            navMeshAgent.isStopped = true;
+            IsOnTable = true;
+            NavMeshAgent.isStopped = true;
+            SelectedTable.gameObject.GetComponent<TableScript>().ShowOrder();
         }
     }
 

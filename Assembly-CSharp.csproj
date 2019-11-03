@@ -620,11 +620,12 @@
     <Compile Include="Assets\NoesisGUI\Plugins\NoesisXaml.cs" />
     <Compile Include="Assets\NoesisGUI\Plugins\XamlDependencies.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
-    <Compile Include="Assets\Scripts\Classes\Customer.cs" />
     <Compile Include="Assets\Scripts\Classes\Enums.cs" />
+    <Compile Include="Assets\Scripts\Classes\FoodOrder.cs" />
     <Compile Include="Assets\Scripts\Classes\RectTransformParameters.cs" />
     <Compile Include="Assets\Scripts\CustomerManager.cs" />
     <Compile Include="Assets\Scripts\PhoneScripts\GuiPhoneButtonScript.cs" />
+    <Compile Include="Assets\Scripts\TableScript.cs" />
     <None Include="Assets\NoesisGUI\LICENSE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Unity Projects/Keep it Simple/Keep-It-Simple/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
