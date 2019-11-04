@@ -7,8 +7,8 @@ using System.Linq;
 
 public class CustomerManager : MonoBehaviour
 {
-    [SerializeField] private readonly float CustomerSpawnTimer=3f;
-    [SerializeField] private readonly int MaxCustomers = 3;
+    [SerializeField] private float CustomerSpawnTimer=3f;
+    [SerializeField] private int MaxCustomers = 3;
     private float CurrentCustomerSpawnTimer;
     private List<TableScript> TableList;
 
@@ -27,9 +27,13 @@ public class CustomerManager : MonoBehaviour
             CurrentCustomerSpawnTimer = CustomerSpawnTimer;
             StartCoroutine(SpawnCustomer());
         }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            TableList.Where(x => x.Order != null).First().GetComponent<TableScript>().DeliverFoodToTable();
+        }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            TableList.Where(x=>x.Order!=null).First().GetComponent<TableScript>().ClearTable();
+            TableList.Where(x => x.WantToPay==true).First().GetComponent<TableScript>().ClearTable();
         }
     }
 
@@ -45,7 +49,7 @@ public class CustomerManager : MonoBehaviour
             //randomly gets an available table
             var availableTableList = TableList.Where(x => x.Order == null).ToList();
             var selectedTable = availableTableList[Random.Range(0, availableTableList.Count)];
-            selectedTable.GenerateFoodOrder();
+            selectedTable.GenerateCustomer();
         }
         yield return null;
     }

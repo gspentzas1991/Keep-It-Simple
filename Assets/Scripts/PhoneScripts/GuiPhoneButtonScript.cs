@@ -93,8 +93,10 @@ public class GuiPhoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointe
         RectTransform.sizeDelta = Vector2.Lerp(startingTransform.Size, endingTransform.Size, interpolationPercentage);
     }
 
-    //Fired when the user clicks on the phone 
-    public void ClickedOnPhone ()
+    /// <summary>
+    /// Starts the switch of the phone's position
+    /// </summary>    
+    public void BeginPositionSwitch()
     {
         if(RectTransform.sizeDelta == FullscreenPositionTransform.Size || RectTransform.sizeDelta == HoverPositionTransform.Size)
         {

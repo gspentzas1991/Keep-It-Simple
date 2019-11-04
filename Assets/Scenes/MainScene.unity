@@ -281,6 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
@@ -613,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 6624237874658603763, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: m_Name
-      value: Table 9
+      value: Table 8
       objectReference: {fileID: 0}
     - target: {fileID: 6624237874658242259, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
@@ -653,7 +658,7 @@ PrefabInstance:
     - target: {fileID: 6624237874658242259, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6624237874658242259, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
@@ -670,6 +675,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: NotePadText
@@ -744,6 +754,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: NotePadText
@@ -927,7 +942,7 @@ PrefabInstance:
     - target: {fileID: 6624237874658603763, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: m_Name
-      value: Table 8
+      value: Table 9
       objectReference: {fileID: 0}
     - target: {fileID: 6624237874658242259, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
@@ -967,7 +982,7 @@ PrefabInstance:
     - target: {fileID: 6624237874658242259, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624237874658242259, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
@@ -984,6 +999,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: NotePadText
@@ -1058,6 +1078,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: NotePadText
@@ -1268,6 +1293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b296366a79dd4045b5bb4c333c859e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CustomerSpawnTimer: 3
+  MaxCustomers: 9
 --- !u!4 &1157013439
 Transform:
   m_ObjectHideFlags: 0
@@ -1585,7 +1612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1339388093}
-        m_MethodName: ClickedOnPhone
+        m_MethodName: BeginPositionSwitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1722,6 +1749,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: NotePadText
@@ -1928,12 +1960,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 514260323}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1693646542 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95612694983450844, guid: 313ad0ef31f75b84f9f31c0528802fdd,
-    type: 3}
-  m_PrefabInstance: {fileID: 514260323}
-  m_PrefabAsset: {fileID: 0}
 --- !u!195 &1693646543
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1948,7 +1974,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 2
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1968,8 +1994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ca30c36b506c64aafa127f12f968fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 1693646542}
-  Camera: {fileID: 963194227}
   GuiPhone: {fileID: 1339388093}
 --- !u!65 &1693646545
 BoxCollider:
@@ -2227,6 +2251,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
@@ -2373,6 +2402,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1578102079}
     - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
         type: 3}
       propertyPath: NotePadText
