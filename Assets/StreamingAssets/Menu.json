@@ -1,0 +1,88 @@
+{"ProductCategories":[
+	{
+		"Name":"Salads",
+		"Products":[
+		  {
+			"id":1,
+			"Name": "Ceasar's Salad",
+			"Price": 5.5,
+			"PreferenceCategories":[
+			{
+				"Name":"Extra",
+				"SelectionMode":1,
+				"Preferences":[
+				{
+					"id":1,
+					"Name":"Mayonaise",
+					"Price":0.2
+				},
+				{
+					"id":2,
+					"Name":"Grouton",
+					"Price":0.5
+				}]
+			}]
+		  },
+		  {
+			"id":2,
+			"Name": "Potato Salad",
+			"Price": 7,
+			"PreferenceCategories":[
+			{
+				"Name":"Meat Options",
+				"SelectionMode":1,
+				"Preferences":[
+				{
+					"id":3,
+					"Name":"Pork",
+					"Price":2
+				},
+				{
+					"id":4,
+					"Name":"Chicken",
+					"Price":1.5
+				}]
+			},
+			{
+				"Name":"Extra",
+				"SelectionMode":1,
+				"Preferences":[
+				{
+					"id":5,
+					"Name":"Mayonaise",
+					"Price":0.2
+				},
+				{
+					"id":6,
+					"Name":"Grouton",
+					"Price":0.5
+				}]
+			}]
+		  },
+		  {
+			"id":3,
+			"Name": "Tuna Salad",
+			"Price": 6.5
+		  }]
+	},
+	{
+		"Name":"Soups",
+		"Products":[
+		  {
+			"id":4,
+			"Name": "Chicken Soup",
+			"Price": 5,
+			"PreferenceCategories":[
+			{
+				"Name":"Spice Level",
+				"SelectionMode":1,
+				"Preferences":[
+				{
+					"id":7,
+					"Name":"Inferno Sauce",
+					"Price":0.5
+				}]
+			}]
+		  }]
+	}
+]}

@@ -16,4 +16,8 @@ namespace Assets.Scripts.Classes
         Available = 0,
         Occupied = 1
     }
+    public enum PreferenceSelectionMode
+    {
+        Selection = 1
+    }
 }

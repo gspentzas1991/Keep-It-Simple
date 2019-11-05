@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Classes
+namespace Assets.Scripts.Classes.OrderModels
 {
-    public class FoodOrder
+    public class Menu
     {
-        public string test = "food";
+        public List<ProductCategory> ProductCategories;
     }
 }

@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.Classes;
+using Assets.Scripts.Classes.OrderModels;
 using UnityEngine.UI;
+using System.Linq;
+
 
 public class TableScript : MonoBehaviour
 {
-    public FoodOrder Order { get; private set; }
+    public List<Product> Order { get; private set; }
     public bool WantToPay;
     public GameObject CustomerPrefab;
     private GameObject CustomerObjectInstance;
     //The position offset from the table for the customer to appear on the seat
     private Vector3 customerSeatOffset = new Vector3(0, 0.25f, -0.5f);
-    [SerializeField] private Text NotePadText;
+    [SerializeField] private MenuManagerScript MenuManager;
+    [SerializeField] private Text NotepadTableNameText;
+    [SerializeField] private Text NotepadOrderText;
+    [SerializeField] private ShiftEarningsScript ShiftEarningsMoney;
     [SerializeField] private Image CustomerEatingIcon;
     [SerializeField] private Image CustomerPayIcon;
     [SerializeField] private float CustomerEatingTimer;
@@ -46,7 +51,8 @@ public class TableScript : MonoBehaviour
     /// </summary>
     public void GenerateCustomer()
     {
-        Order = new FoodOrder();
+        //Generates a product list for the table's order
+        Order = MenuManager.GenerateOrderForTable();
         //We apply the offset on the table's position to get the correct customer position on the seat
         var customerGameObjectPosition = transform.position + customerSeatOffset;
         CustomerObjectInstance = Instantiate(CustomerPrefab, customerGameObjectPosition, new Quaternion());
@@ -60,6 +66,8 @@ public class TableScript : MonoBehaviour
         WantToPay = false;
         CustomerPayIcon.enabled = false;
         Destroy(CustomerObjectInstance);
+        //Placeholder value, to be calculated from order
+        ShiftEarningsMoney.Earnings += 3;
         Order = null;
     }
 
@@ -78,7 +86,19 @@ public class TableScript : MonoBehaviour
     {
         if (Order!=null)
         {
-            NotePadText.text = this.name + "\n" + Order.test;
+            NotepadTableNameText.text = this.name;
+            NotepadOrderText.text = "";
+            foreach (var product in Order.Where(x=>x.Quantity>0))
+            {
+                NotepadOrderText.text += product.Quantity + " X " +product.Name + "\n";
+                foreach (var preferenceCategory in product.PreferenceCategories)
+                {
+                    foreach(var preference in preferenceCategory.Preferences.Where(x=>x.Quantity>0))
+                    {
+                        NotepadOrderText.text += "\t - " + preference.Name + "\n";
+                    }
+                }
+            }
         }
     }
 }

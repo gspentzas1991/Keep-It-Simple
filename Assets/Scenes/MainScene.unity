@@ -289,6 +289,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1 &251808897
@@ -386,6 +406,84 @@ MonoBehaviour:
   _enableGamepad: 0
   _emulateTouch: 0
   _useRealTimeClock: 0
+--- !u!1 &485726377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485726378}
+  - component: {fileID: 485726380}
+  - component: {fileID: 485726379}
+  m_Layer: 5
+  m_Name: ShiftEarningsLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &485726378
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485726377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children:
+  - {fileID: 1132172828}
+  m_Father: {fileID: 1578102080}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 371.61, y: 249.49}
+  m_SizeDelta: {x: 320, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &485726379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485726377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Shift Earnings :'
+--- !u!222 &485726380
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485726377}
+  m_CullTransparentMesh: 0
 --- !u!1001 &514260323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -685,6 +783,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1001 &520200838
@@ -764,6 +882,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1001 &541300437
@@ -838,6 +976,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1 &580696294
@@ -1009,6 +1167,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1001 &698895150
@@ -1088,6 +1266,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1 &705507993
@@ -1264,6 +1462,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 38.9, y: 41.13, z: 0}
+--- !u!1 &1132172827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132172828}
+  - component: {fileID: 1132172830}
+  - component: {fileID: 1132172829}
+  - component: {fileID: 1132172831}
+  m_Layer: 5
+  m_Name: ShiftEarningsMoney
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1132172828
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.84, y: 0.84, z: 1}
+  m_Children: []
+  m_Father: {fileID: 485726378}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 219.24, y: 2}
+  m_SizeDelta: {x: 391.47, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1132172829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 32
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 56
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "34.2 \u20AC"
+--- !u!222 &1132172830
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172827}
+  m_CullTransparentMesh: 0
+--- !u!114 &1132172831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336b14554502ce04b93025e8615b0989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Earnings: 0
 --- !u!1 &1157013437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1610,7 @@ GameObject:
   - component: {fileID: 1292489424}
   - component: {fileID: 1292489423}
   m_Layer: 5
-  m_Name: NotePadText
+  m_Name: OrderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1336,15 +1625,15 @@ RectTransform:
   m_GameObject: {fileID: 1292489421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1947752117}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 178.6, y: 264}
+  m_AnchoredPosition: {x: 12, y: -9.5}
+  m_SizeDelta: {x: 280, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1292489423
 MonoBehaviour:
@@ -1366,12 +1655,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1759,8 +2048,105 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
+--- !u!1 &1450863733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450863734}
+  - component: {fileID: 1450863736}
+  - component: {fileID: 1450863735}
+  m_Layer: 5
+  m_Name: TableNameText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1450863734
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450863733}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1947752117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 120}
+  m_SizeDelta: {x: 140, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1450863735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450863733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1450863736
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450863733}
+  m_CullTransparentMesh: 0
 --- !u!1 &1578102076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +2240,7 @@ RectTransform:
   - {fileID: 1339388090}
   - {fileID: 251808898}
   - {fileID: 1947752117}
+  - {fileID: 485726378}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2259,6 +2646,26 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
 --- !u!1 &1947752116
@@ -2290,6 +2697,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1450863734}
   - {fileID: 1292489422}
   m_Father: {fileID: 1578102080}
   m_RootOrder: 2
@@ -2412,5 +2820,68 @@ PrefabInstance:
       propertyPath: NotePadText
       value: 
       objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: MenuManager
+      value: 
+      objectReference: {fileID: 2143241432}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadTableNameText
+      value: 
+      objectReference: {fileID: 1450863735}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: NotepadOrderText
+      value: 
+      objectReference: {fileID: 1292489423}
+    - target: {fileID: 1928369266766354654, guid: bcd8a0810b5415a48bb37c7c70b8761f,
+        type: 3}
+      propertyPath: ShiftEarningsMoney
+      value: 
+      objectReference: {fileID: 1132172831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd8a0810b5415a48bb37c7c70b8761f, type: 3}
+--- !u!1 &2143241431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143241433}
+  - component: {fileID: 2143241432}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2143241432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143241431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0566d8db27d2394a817f08fdc525527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2143241433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143241431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.525461, y: -10.582037, z: 4.121765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

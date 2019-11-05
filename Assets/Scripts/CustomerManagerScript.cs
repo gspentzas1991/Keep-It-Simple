@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.Classes;
+using Assets.Scripts.Classes.OrderModels;
 using System.Linq;
+using System.IO;
 
 
-public class CustomerManager : MonoBehaviour
+public class CustomerManagerScript : MonoBehaviour
 {
     [SerializeField] private float CustomerSpawnTimer=3f;
     [SerializeField] private int MaxCustomers = 3;
@@ -16,7 +17,7 @@ public class CustomerManager : MonoBehaviour
     {
         //spawnTimer initialization
         CurrentCustomerSpawnTimer = CustomerSpawnTimer;
-        TableList = GameObject.FindGameObjectsWithTag("Table").Select(x=>x.GetComponent<TableScript>()).ToList();
+        TableList = GameObject.FindGameObjectsWithTag("Table").Select(x => x.GetComponent<TableScript>()).ToList();
     }
 
     void Update()
