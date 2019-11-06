@@ -9,5 +9,8 @@ namespace Assets.Scripts.Classes.OrderModels
     public class Menu
     {
         public List<ProductCategory> ProductCategories;
+        public List<Product> Products;
+        public List<PreferenceCategory> PreferenceCategories;
+        public List<Preference> Preferences;
     }
 }

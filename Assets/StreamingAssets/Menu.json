@@ -1,88 +1,195 @@
-{"ProductCategories":[
-	{
-		"Name":"Salads",
-		"Products":[
-		  {
-			"id":1,
+{
+	"ProductCategories":[
+		{
+			"Id":1,
+			"Name":"Salads"
+		},		
+		{
+			"Id":2,
+			"Name":"Soups"
+		},		
+		{
+			"Id":3,
+			"Name":"Pasta"
+		},		
+		{
+			"Id":4,
+			"Name":"Coffee"
+		}
+	],
+	"Products":[
+		{
+			"Id":1,
+			"ProductCategoryId":1,
+			"PreferenceCategoriesIds":[],
 			"Name": "Ceasar's Salad",
-			"Price": 5.5,
-			"PreferenceCategories":[
-			{
-				"Name":"Extra",
-				"SelectionMode":1,
-				"Preferences":[
-				{
-					"id":1,
-					"Name":"Mayonaise",
-					"Price":0.2
-				},
-				{
-					"id":2,
-					"Name":"Grouton",
-					"Price":0.5
-				}]
-			}]
-		  },
-		  {
-			"id":2,
+			"Price": 5.5
+		},		
+		{
+			"Id":2,
+			"ProductCategoryId":1,
+			"PreferenceCategoriesIds":[],
 			"Name": "Potato Salad",
-			"Price": 7,
-			"PreferenceCategories":[
-			{
-				"Name":"Meat Options",
-				"SelectionMode":1,
-				"Preferences":[
-				{
-					"id":3,
-					"Name":"Pork",
-					"Price":2
-				},
-				{
-					"id":4,
-					"Name":"Chicken",
-					"Price":1.5
-				}]
-			},
-			{
-				"Name":"Extra",
-				"SelectionMode":1,
-				"Preferences":[
-				{
-					"id":5,
-					"Name":"Mayonaise",
-					"Price":0.2
-				},
-				{
-					"id":6,
-					"Name":"Grouton",
-					"Price":0.5
-				}]
-			}]
-		  },
-		  {
+			"Price": 7
+		},		
+		{
 			"id":3,
+			"ProductCategoryId":1,
+			"PreferenceCategoriesIds":[],
 			"Name": "Tuna Salad",
 			"Price": 6.5
-		  }]
-	},
-	{
-		"Name":"Soups",
-		"Products":[
-		  {
-			"id":4,
+		},		
+		{
+			"Id":4,
+			"ProductCategoryId":2,
+			"PreferenceCategoriesIds":[1],
 			"Name": "Chicken Soup",
-			"Price": 5,
-			"PreferenceCategories":[
-			{
-				"Name":"Spice Level",
-				"SelectionMode":1,
-				"Preferences":[
-				{
-					"id":7,
-					"Name":"Inferno Sauce",
-					"Price":0.5
-				}]
-			}]
-		  }]
-	}
-]}
+			"Price": 5
+		},		
+		{
+			"Id":5,
+			"ProductCategoryId":2,
+			"PreferenceCategoriesIds":[1],
+			"Name": "Mushroom Soup",
+			"Price": 7.5
+		},		
+		{
+			"Id":6,
+			"ProductCategoryId":3,
+			"PreferenceCategoriesIds":[2],
+			"Name": "Napolitana",
+			"Price": 6
+		},		
+		{
+			"Id":7,
+			"ProductCategoryId":3,
+			"PreferenceCategoriesIds":[2],
+			"Name": "Carbonara",
+			"Price": 8
+		},		
+		{
+			"Id":8,
+			"ProductCategoryId":3,
+			"PreferenceCategoriesIds":[2],
+			"Name": "Liguini",
+			"Price": 6
+		},		
+		{
+			"Id":9,
+			"ProductCategoryId":4,
+			"PreferenceCategoriesIds":[3,4],
+			"Name": "Espresso",
+			"Price": 4
+		},		
+		{
+			"Id":10,
+			"ProductCategoryId":4,
+			"PreferenceCategoriesIds":[3,4],
+			"Name": "Capuchino",
+			"Price": 4
+		},		
+		{
+			"Id":11,
+			"ProductCategoryId":4,
+			"PreferenceCategoriesIds":[3,4],
+			"Name": "Macchiato",
+			"Price": 4.5
+		}
+	],
+	"PreferenceCategories":[
+		{
+			"Id":1,
+			"Name":"Soup Extras",
+			"SelectionMode":1
+		},		
+		{
+			"Id":2,
+			"Name":"Cheese",
+			"SelectionMode":1
+		},		
+		{
+			"Id":3,
+			"Name":"Sugar",
+			"SelectionMode":1
+		},			
+		{
+			"Id":4,
+			"Name":"Syrup",
+			"SelectionMode":1
+		}
+	],
+	"Preferences":[
+		{
+			"Id":1,
+			"PreferenceCategoryId":1,
+			"Name":"Carrots",
+			"Price":0.2
+		},		
+		{
+			"Id":2,
+			"PreferenceCategoryId":1,
+			"Name":"Potatoes",
+			"Price":0.4
+		},		
+		{
+			"Id":3,
+			"PreferenceCategoryId":2,
+			"Name":"Feta",
+			"Price":0.2
+		},			
+		{
+			"Id":4,
+			"PreferenceCategoryId":2,
+			"Name":"Cheddar",
+			"Price":0.2
+		},			
+		{
+			"Id":5,
+			"PreferenceCategoryId":2,
+			"Name":"Gouda",
+			"Price":0.2
+		},			
+		{
+			"Id":6,
+			"PreferenceCategoryId":3,
+			"Name":"White Sugar",
+			"Price":0
+		},		
+		{
+			"Id":7,
+			"PreferenceCategoryId":3,
+			"Name":"Brown Sugar",
+			"Price":0
+		},		
+		{
+			"Id":8,
+			"PreferenceCategoryId":3,
+			"Name":"Stevia",
+			"Price":0.1
+		},		
+		{
+			"Id":9,
+			"PreferenceCategoryId":4,
+			"Name":"Caramel",
+			"Price":0.2
+		},		
+		{
+			"Id":10,
+			"PreferenceCategoryId":4,
+			"Name":"Strawberry",
+			"Price":0.2
+		},		
+		{
+			"Id":11,
+			"PreferenceCategoryId":4,
+			"Name":"Pistachio",
+			"Price":0.2
+		},		
+		{
+			"Id":12,
+			"PreferenceCategoryId":4,
+			"Name":"Syrup Mix",
+			"Price":0.3
+		}
+	]
+}

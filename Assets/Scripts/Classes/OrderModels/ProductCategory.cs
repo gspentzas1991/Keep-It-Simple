@@ -9,7 +9,7 @@ namespace Assets.Scripts.Classes.OrderModels
     [Serializable]
     public class ProductCategory
     {
+        public int Id;
         public string Name;
-        public List<Product> Products;
     }
 }

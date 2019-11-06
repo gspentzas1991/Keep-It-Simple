@@ -9,8 +9,8 @@ namespace Assets.Scripts.Classes.OrderModels
     [Serializable]
     public class PreferenceCategory
     {
+        public int Id;
         public string Name;
         public PreferenceSelectionMode SelectionMode;
-        public List<Preference> Preferences;
     }
 }

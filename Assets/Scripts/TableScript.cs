@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.Classes.OrderModels;
 using UnityEngine.UI;
 using System.Linq;
+using Assets.Scripts.Classes;
 
 
 public class TableScript : MonoBehaviour
 {
-    public List<Product> Order { get; private set; }
+    public List<OrderedProduct> Order { get; private set; }
     public bool WantToPay;
     public GameObject CustomerPrefab;
     private GameObject CustomerObjectInstance;
@@ -88,15 +88,12 @@ public class TableScript : MonoBehaviour
         {
             NotepadTableNameText.text = this.name;
             NotepadOrderText.text = "";
-            foreach (var product in Order.Where(x=>x.Quantity>0))
+            foreach (var orderedProduct in Order.Where(x=>x.Product.Quantity>0))
             {
-                NotepadOrderText.text += product.Quantity + " X " +product.Name + "\n";
-                foreach (var preferenceCategory in product.PreferenceCategories)
+                NotepadOrderText.text += orderedProduct.Product.Quantity + " X " +orderedProduct.Product.Name + "\n";
+                foreach(var preference in orderedProduct.Preferences.Where(x=>x.Quantity>0))
                 {
-                    foreach(var preference in preferenceCategory.Preferences.Where(x=>x.Quantity>0))
-                    {
-                        NotepadOrderText.text += "\t - " + preference.Name + "\n";
-                    }
+                    NotepadOrderText.text += "\t - " + preference.Name + "\n";
                 }
             }
         }

@@ -620,6 +620,7 @@
     <Compile Include="Assets\NoesisGUI\Plugins\NoesisXaml.cs" />
     <Compile Include="Assets\NoesisGUI\Plugins\XamlDependencies.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\Classes\CustomerOrder.cs" />
     <Compile Include="Assets\Scripts\Classes\Enums.cs" />
     <Compile Include="Assets\Scripts\Classes\OrderModels\Menu.cs" />
     <Compile Include="Assets\Scripts\Classes\OrderModels\Preference.cs" />

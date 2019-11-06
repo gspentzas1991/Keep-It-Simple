@@ -10,9 +10,10 @@ namespace Assets.Scripts.Classes.OrderModels
     public class Product
     {
         public int Id;
+        public int ProductCategoryId;
+        public List<int> PreferenceCategoriesIds;
         public string Name;
         public float Price;
         public int Quantity;
-        public List<PreferenceCategory> PreferenceCategories;
     }
 }

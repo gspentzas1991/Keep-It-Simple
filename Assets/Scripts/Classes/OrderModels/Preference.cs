@@ -10,6 +10,7 @@ namespace Assets.Scripts.Classes.OrderModels
     public class Preference
     {
         public int Id;
+        public int PreferenceCategoryId;
         public string Name;
         public float Price;
         public int Quantity;
